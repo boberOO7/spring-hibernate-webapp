@@ -14,7 +14,7 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/manage-roles", method = RequestMethod.GET)
+    @RequestMapping(value = "admin/manage-roles", method = RequestMethod.GET)
     public ModelAndView manageRoles(ModelAndView vm) {
         vm.addObject("roles", userService.getAllRoles());
         vm.addObject("users", userService.getAllUsers());
